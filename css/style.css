@@ -1,0 +1,445 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: #FFFFD9;
+  font-family: 'Pavanam', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 100px;
+  font-family: 'Covered By Your Grace', sans-serif;
+  line-height: 1;
+  padding-top: 80px;
+  text-align: center;
+}
+
+/*tab to create animation*/
+h1:focus {
+  animation: bounceIn 2s;
+}
+
+/*CSS generated animation*/
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+h2{
+  font-size: 80px;
+  font-family: 'Covered By Your Grace';
+  line-height: 1.5;
+}
+
+/*parallax image challenge*/
+header{
+  background-attachment: fixed;
+  background-image: url(../images/ann_arbor.jpg);
+  background-position: center;
+  background-size: cover;    
+  background-repeat: no-repeat;
+  height: 600px;
+  grid-column: 1 / -1;
+  grid-row: 2 / span 1;
+}
+
+header p{
+  color: black;
+  font-size: 24px;
+  text-align: center;
+  color: #080842;
+  background-color: rgba(255,255,217, .75);
+  padding: 10px;
+  margin: 30px;
+  margin-top: 170px;
+  margin-bottom: 50px;
+}
+
+.title {
+  color: #080842;
+  background-color: rgba(255,255,217, .75);
+  padding: 10px;
+  margin-top: 100px;
+}
+
+/*angelos header*/
+#angelos {
+  background-image: url(../images/angelos.jpg);
+  height: 870px;
+}
+
+/*angelos paragraph*/
+#angelos p{
+  margin: 20px;
+  margin-top: 150px;
+}
+
+/*avalon header*/
+#avalon {
+  background-image: url(../images/avalon.jpg);
+  height: 1020px;
+}
+
+/*avalon paragraph*/
+#avalon p{
+  margin: 20px;
+  margin-top: 150px;
+}
+
+/*savas header*/
+#savas {
+  background-image: url(../images/savas.jpg);
+  height: 990px;
+}
+
+/*savas paragraph*/
+#savas p{
+  margin-top: 150px;
+}
+
+/*fleetwood header*/
+#fleetwood {
+  background-image: url(../images/fleetwood.jpg);
+  height: 850px;
+}
+/*fleetwood paragraph*/
+#fleetwood p{
+  margin: 20px;
+  margin-top: 150px;
+}
+
+/*non animated headers*/
+h2 {
+  color: #080842;
+  background-color: rgba(255,255,217, .75);
+  padding: 10px;
+  margin-top: 155px;
+  text-align: center;
+  -webkit-box-orient: horizontal;
+}
+
+/*skip to main content*/
+.skipcont a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skipcont a:focus{
+  top:0;
+}
+
+/*sticky footer*/
+footer{
+  background-color: rgba(255,255,217);
+  color: #080842;
+  grid-column: 1 / -1;
+  grid-row: 3;
+  padding: 30px;
+  text-align: center;
+  max-height: 50px;
+}
+
+
+.container{
+  display: grid;
+  grid-template-columns: 100px 500px 100px;
+  grid-template-rows: 70px auto auto;
+}
+
+}
+/*grid placing navigation*/
+.nav {
+  display: inline-block;
+  margin: 0;
+  grid-column: 1;
+  grid-row: 1 / span 1;
+  justify-content: left;
+}
+
+.nav-links {
+  display: flex;
+  padding: 20px;
+  font-size: 20px;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #080842;
+}
+
+.nav-item {
+  justify-content: flex-start;
+  align-content: left;
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+
+} 
+
+.active-page {
+  border-bottom: 1px solid #080842;
+  justify-content: flex-start;
+  align-content: left;
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+
+}
+
+a:hover {
+  color: #008ECC;
+}
+
+
+/*gallery of images on pages*/
+ .flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+  .flex-item {
+    padding: 5px;
+    width: 400px;
+    height: 400px;
+    margin-top: 10px;
+}
+/*gallery on landing page*/
+  .container_new {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  
+    -webkit-flex-flow: row wrap;
+    justify-content: center;
+}
+  .item {
+    margin: 0 auto;
+    padding: 5px;
+    width: 270px;
+    height: 270px;
+    margin-top: 20px;
+  
+}
+
+/*CONTACT FORM*/
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px;  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #080842;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #9BD4F5;
+  color: #080842;
+}
+
+.contact {
+  border-radius: 5px;
+  background-color: #FFFFD9;
+  padding: 20px;
+  color: #080842;
+}
+
+.contact p {
+  font-size: 20pt;
+  margin-bottom: 30px;
+
+}
+/*making subject larger in contact form*/
+#subject {
+  height: 200px;
+}
+
+@media screen and (min-width: 700px)/*tablet*/{
+  .container{
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+  }
+
+  h1 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    background-size: auto;
+}
+
+
+#angelos {
+  height: 800px;
+}
+
+/*angelos paragraph*/
+#angelos p{
+  margin: 20px;
+  margin-top: 150px;
+}
+
+#avalon {
+  height: 820px;
+}
+
+#avalon p{
+  margin: 20px;
+  margin-top: 150px;
+}
+
+#savas {
+  height: 850px;
+}
+
+#savas p{
+  margin: 20px;
+  margin-top: 150px;
+}
+
+#fleetwood {
+  height: 850px;
+}
+
+#fleetwood p{
+  margin: 20px;
+  margin-top: 150px;
+}
+
+
+
+@media screen and (min-width: 900px)/*laptop*/{
+
+  .container{
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+  }
+
+  header {
+    height: 600px;
+  }
+
+  header p {
+    text-align: center;
+  }
+  h1 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    background-size: auto;
+}
+
+/*nav*/
+  .nav {
+    display: grid;
+    grid-column: 2 / span 1;
+    grid-row: 1;
+    margin: 0;
+    justify-content: center;
+}
+
+  .nav-item {
+    list-style-type: none;
+    text-align: center;
+} 
+
+#angelos {
+  height: 700px;
+}
+
+/*angelos paragraph*/
+#angelos p{
+  margin: 20px;
+  margin-top: 150px;
+}
+
+#avalon {
+  height: 800px;
+}
+
+#avalon p{
+  margin: 20px;
+  margin-top: 150px;
+}
+
+#savas {
+  height: 750px;
+}
+
+#savas p{
+  margin: 20px;
+  margin-top: 150px;
+}
+
+#fleetwood {
+  height: 750px;
+}
+
+#fleetwood p{
+  margin: 20px;
+  margin-top: 150px;
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: initial;
+  }
+
+  .skipcont a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none;
+    transition: none;
+    z-index: 1;
+  }
+
+  .skipcont a:focus{
+    top:0;
+  }
+}
